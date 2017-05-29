@@ -3,12 +3,18 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 Vue.use(VueRouter);
 
-import Foo from './Foo.vue'
-import Bar from './Bar.vue'
+import Home from './Home.vue'
+import Explorer from './Explorer.vue'
+import Cart from './Cart.vue'
+import Me from './Me.vue'
 const router=new VueRouter({
-routes:[
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  mode:'history',
+  base:__dirname,
+  routes:[
+    { path: '/home', component: Home },
+    { path: '/explorer', component:Explorer},
+    { path: '/cart', component:Cart},
+    { path: '/me', component:Me}
 ]
 });
 new Vue({
